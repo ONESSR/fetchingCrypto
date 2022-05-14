@@ -75,28 +75,28 @@ After the pixel pushing was completed I jumped into the code like a game of doub
 
 ### EXPLORE THE DATA & SAVE TO VARIABLES:
 * locate image of crypto (link address)
- * How to turn an link to a png download to a link address ❌ (Use placeholder circle until figured out!)
+* How to turn an link to a png download to a link address ❌ (Use placeholder circle until figured out!)
 * locate name crypto ✅
 * locate symbol crypto ✅
 * locate price of crypto ✅
 * convert price to two decimal places -- toFixed(2)  ✅ (The step below covers this!)
 * convert price to dollars ✅
-  <!--
-    Format the price to USD using it's locales:   
-    Using the currency field, you can specify which specific currency you want to format to, such as 'USD', 'CAD' or 'INR'.
-    The useGrouping field is a boolean field that enables you to group the number using commas (or periods, for some locales). By default, it is set to true
- -->
-     ```javascript
-     const price = 1470000.15;
-     let dollarUS = Intl.NumberFormat("en-US", {
-     style: "currency",
-     currency: "USD",
-     });
-     ```
-    
+ <!--
+   Format the price to USD using it's locales:  
+   Using the currency field, you can specify which specific currency you want to format to, such as 'USD', 'CAD' or 'INR'.
+   The useGrouping field is a boolean field that enables you to group the number using commas (or periods, for some locales). By default, it is set to true
+-->
+    ```javascript
+    const price = 1470000.15;
+    let dollarUS = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    });
+    ```
+  
 Think about how the price should update, addEventClick button?, 5minute setInterval?
 Using saved variables data should I create a function to create my own object of data collected?
-          
+        
 
 ### HTML
 * create structure for card layout ✅
@@ -108,10 +108,29 @@ Using saved variables data should I create a function to create my own object of
 * DRY principle ✅
 
 ### TIME TO CODE!!!  ✅ ✅
- * To view the final project live:
- * Please see the project files for a deeper look at the code
- * The API used is from: https://documenter.getpostman.com/view/5734027/RzZ6Hzr3:
- * Exact API used: "https://api.coinstats.app/public/v1/coins?skip=0&limit=1"
- <br>
+* To view the final project live:
+* Please see the project files for a deeper look at the code
+* The API used is from: https://documenter.getpostman.com/view/5734027/RzZ6Hzr3:
+* Exact API used: "https://api.coinstats.app/public/v1/coins?skip=0&limit=1"
 <br>
+<br>
+
+## Summary
+Wow!! That was a blast! and it took exactly as long as I thought it would - too long!! But seriously it was a great day🤭 of coding and trying to reinforce how to play with APIs and position data. It was also nice to get back into Figma as I hadn't used it for a personal project in a little while.
+
+I unfortunately did not manage to get the crypto icon to load on the page, well that's not exactly true, after tinkering I was able to get it to appear on the screen but it was messing with other data being displayed so until I can spend some more time with it to get it right I created a placeholder orange circle which will suffice for now.
+
+Some things I had not done before:
+* How to convert numbers to country specific currencies
+* How to convert float numbers to desired decimal places
+
+In summary I think it was a successful project and I look forward to adding to it and learning more.
+
+### Result:
+<br>
+
+![BitcoinAPIProjectResult](./_assets/BitcoinAPIResult.png)
+
+
+
 
