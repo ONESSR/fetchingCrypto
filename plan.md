@@ -108,7 +108,7 @@ Using saved variables data should I create a function to create my own object of
 * DRY principle ✅
 
 ### TIME TO CODE!!!  ✅ ✅
-* To view the final project live:
+* To view the final project live: https://onessr.github.io/fetchingCrypto/
 * Please see the project files for a deeper look at the code
 * The API used is from: https://documenter.getpostman.com/view/5734027/RzZ6Hzr3:
 * Exact API used: "https://api.coinstats.app/public/v1/coins?skip=0&limit=1"
