@@ -2,7 +2,6 @@
 fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
   .then((res) => res.json())
   .then((data) => {
-    console.log("data", data);
     deconstruct(data);
   })
   .catch((err) => {
@@ -19,7 +18,6 @@ function deconstruct(data) {
     currency: "USD"
   }).format(price);
   const cryptoImage = data.image.large;
-  console.log(cryptoImage);
   display(coinName, symbol, priceFormat, cryptoImage);
 }
 
