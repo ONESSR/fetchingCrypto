@@ -1,12 +1,16 @@
+setInterval(getData, 1000);
+
 // fetch data from api
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
-  .then((res) => res.json())
-  .then((data) => {
-    deconstruct(data);
-  })
-  .catch((err) => {
-    console.log("An error has occured, unable to retrieve data.");
-  });
+function getData() {
+  fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
+    .then((res) => res.json())
+    .then((data) => {
+      deconstruct(data);
+    })
+    .catch((err) => {
+      console.log("An error has occured, unable to retrieve data.");
+    });
+}
 
 // separate concerns by deconstructing into variable needed
 function deconstruct(data) {
