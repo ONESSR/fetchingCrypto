@@ -1,4 +1,4 @@
-setInterval(getData, 1000);
+setInterval(getData, 2000);
 
 // fetch data from api
 function getData() {
