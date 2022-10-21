@@ -15,6 +15,7 @@ So that's it, get the data, whack it on the page and style it. Sounds simple eno
 <br>
 
 ### Research
+
 I looked around for some examples of how crypto is displayed online, scoping out CoinMarketCap, Binance, Coinbase, Kraken and a couple of other titans of the space. I settled on using Coinbase for a design reference as I have always admired their design aesthetic and how they manage to simplify the user experience even when there is a mammoth of information to present. Minimalism is very much the way I like things to be personally as a user and as a designer - Donald Judd would be proud.
 
 <br>
@@ -25,6 +26,7 @@ I looked around for some examples of how crypto is displayed online, scoping out
 <br>
 
 ### Sketching
+
 Next up are some quick sketches in Figma just to get an overview sense on the elements that would be required and how they might be structured in html. I was also able to plant the seeds of the kind of spacing system I would use.
 
 <br>
@@ -35,6 +37,7 @@ Next up are some quick sketches in Figma just to get an overview sense on the el
 <br>
 
 ### Wireframes
+
 Moving swiftly on from those drunkard sketches I whipped together some low-fidelity wireframes. This allowed me to play with the balance and flow of the site and to get a sense of how the visual hierarchy of elements would work whilst including how I would prioritise the information.
 
 <br>
@@ -45,6 +48,7 @@ Moving swiftly on from those drunkard sketches I whipped together some low-fidel
 <br>
 
 ### Elements
+
 I whittled down the elements that would be required for this design so that I had those constraints in place already before sourcing the data. It was helpful to use as the final list of data and elements that might be required for the project.
 
 <br>
@@ -55,6 +59,7 @@ I whittled down the elements that would be required for this design so that I ha
 <br>
 
 ### HI-FI
+
 Now that the elements were secured I worked iteratively to produce a high-fidelity mockup of how I would position the data once I fetched it and how the final layout would look. All visible data was to be sourced from the APi. I used Figma grid, autolayout and constraints to ensure the accuracy of spacing and positioning although I was happy for the width of the element to be fluid up to a point. This got me thinking about max-widths before I even had a plan for the code.
 
 <br>
@@ -65,72 +70,76 @@ Now that the elements were secured I worked iteratively to produce a high-fideli
 <br>
 
 ## Code Plan
+
 After the pixel pushing was completed I jumped into the code like a game of double dutch. I'm a good skipper as I did boxing training for 17 years and skipped everyday, but I knew I would get tangled in the ropes with this game if I didn't have some sort of a coding plan.
 
 ### JS
 
 ### GET DATA:
-* fetch the promise - function ✅
-* await and convert to json() - async function ✅
+
+- fetch the promise - function ✅
+- await and convert to json() - async function ✅
 
 ### EXPLORE THE DATA & SAVE TO VARIABLES:
-* locate image of crypto (link address)
-* How to turn an link to a png download to a link address ❌ (Use placeholder circle until figured out!)
-* locate name crypto ✅
-* locate symbol crypto ✅
-* locate price of crypto ✅
-* convert price to two decimal places -- toFixed(2)  ✅ (The step below covers this!)
-* convert price to dollars ✅
- <!--
-   Format the price to USD using it's locales:  
-   Using the currency field, you can specify which specific currency you want to format to, such as 'USD', 'CAD' or 'INR'.
-   The useGrouping field is a boolean field that enables you to group the number using commas (or periods, for some locales). By default, it is set to true
--->
-    ```javascript
-    const price = 1470000.15;
-    let dollarUS = Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    });
-    ```
-  
+
+- locate image of crypto (link address)
+- How to turn an link to a png download to a link address ❌ (Use placeholder circle until figured out!)
+- locate name crypto ✅
+- locate symbol crypto ✅
+- locate price of crypto ✅
+- convert price to two decimal places -- toFixed(2) ✅ (The step below covers this!)
+- convert price to dollars ✅
+   <!--
+     Format the price to USD using it's locales:  
+     Using the currency field, you can specify which specific currency you want to format to, such as 'USD', 'CAD' or 'INR'.
+     The useGrouping field is a boolean field that enables you to group the number using commas (or periods, for some locales). By default, it is set to true
+  -->
+      ```javascript
+      const price = 1470000.15;
+      let dollarUS = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      });
+      ```
+
 Think about how the price should update, addEventClick button?, 5minute setInterval?
 Using saved variables data should I create a function to create my own object of data collected?
-        
 
 ### HTML
-* create structure for card layout ✅
-* give all content id or class accordingly, keep naming general, kebab-case-the-names ✅
+
+- create structure for card layout ✅
+- give all content id or class accordingly, keep naming general, kebab-case-the-names ✅
 
 ### CSS
-* use css variable for efficiency ✅
-* use kebab-case-naming-convention ✅
-* DRY principle ✅
 
-### TIME TO CODE!!!  ✅ ✅
-* To view the final project live: https://onessr.github.io/fetchingCrypto/
-* Please see the project files for a deeper look at the code
-* The API used is from: https://documenter.getpostman.com/view/5734027/RzZ6Hzr3:
-* Exact API used: "https://api.coinstats.app/public/v1/coins?skip=0&limit=1"
-<br>
-<br>
+- use css variable for efficiency ✅
+- use kebab-case-naming-convention ✅
+- DRY principle ✅
+
+### TIME TO CODE!!! ✅ ✅
+
+- To view the final project live: https://onessr.github.io/fetchingCrypto/
+- Please see the project files for a deeper look at the code
+- The API used is from: https://www.coingecko.com/en/api/documentation
+- Exact API used: "https://api.coingecko.com/api/v3/coins/bitcoin"
+  <br>
+  <br>
 
 ## Summary
+
 Wow!! That was a blast! and it took exactly as long as I thought it would - too long!! But seriously it was a great day🤭 of coding and trying to reinforce how to play with APIs and position data. It was also nice to get back into Figma as I hadn't used it for a personal project in a little while.
 
 I unfortunately did not manage to get the crypto icon to load on the page, well that's not exactly true, after tinkering I was able to get it to appear on the screen but it was messing with other data being displayed so until I can spend some more time with it to get it right I created a placeholder orange circle which will suffice for now.
 
 Some things I had not done before:
-* How to convert numbers to country specific currencies
-* How to convert float numbers to desired decimal places
+
+- How to convert numbers to country specific currencies
+- How to convert float numbers to desired decimal places
 
 In summary I think it was a successful project and I look forward to adding to it and learning more.
 
 ### Result:
+
 <br>
 
-![BitcoinAPIProjectResult](./_assets/BitcoinAPIResult.png)
-
-
-
-
+![BitcoinAPIProjectResult](./_assets/BitcoinAPIResult.jpeg)

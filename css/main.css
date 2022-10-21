@@ -1,6 +1,6 @@
-*, 
+*,
 *::before,
-*::after{
+*::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -10,32 +10,27 @@
   border: 0;
 }
 
-:root{
-  --project-font: 'Inter', sans-serif;
+:root {
+  --project-font: "Inter", sans-serif;
 
   --font-size-body: 16px;
   --font-size-label: 14px;
 
   --font-weight-semi-bold: 600;
   --font-weight-medium: Medium;
-  
+
   --card-font-color: #ffffff;
-  --card-bg-color: #0E0F10;
-
+  --card-bg-color: #0e0f10;
 }
 
-body{
-
-  /* background-color: cornsilk; */
+body {
   font-family: var(--project-font);
-  color: var(--card-font-color)
+  color: var(--card-font-color);
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-.card{
-  background-color: aquamarine;
-  display: inline-block;
+.card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -48,8 +43,7 @@ body{
   background-color: var(--card-bg-color);
 }
 
-
-.circle{
+.circle {
   width: 48px;
   height: 48px;
   background-color: orange;
@@ -58,30 +52,28 @@ body{
   margin-right: 16px;
 }
 
-.card-container-icon{
+.card-container-icon {
   display: flex;
   align-items: center;
 }
 
-.card-container-header{
+.card-container-header {
   display: flex;
   flex-direction: column;
   margin-right: 80px;
 }
 
-.card-content-name{
-  font-size: var(--body-font-size );
+.card-content-name {
+  font-size: var(--body-font-size);
   font-weight: var(--font-weight-medium);
 }
 
-.card-content-symbol{
+.card-content-symbol {
   font-size: var(--font-size-label);
   font-weight: var(--font-weight-medium);
   opacity: 70%;
 }
 
-.card-content-price{
+.card-content-price {
   font-weight: var(--font-weight-medium);
 }
-
-
