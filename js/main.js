@@ -19,6 +19,7 @@ function deconstruct(data) {
     currency: "USD"
   }).format(price);
   const cryptoImage = data.image.large;
+  console.log(cryptoImage);
   display(coinName, symbol, priceFormat, cryptoImage);
 }
 
@@ -26,7 +27,7 @@ function deconstruct(data) {
 function display(coinName, symbol, priceFormat, cryptoImage) {
   document.getElementById("card").innerHTML = `
   <div class="card-container-icon">
-        <img src=${cryptoImage} id="img" width: "48px" height: "48px" class="circle">
+        <img src="${cryptoImage}" id="img" width: "48px" height: "48px" class="circle">
       </div>
       
       <div class="card-container-header">
