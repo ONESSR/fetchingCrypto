@@ -31,7 +31,7 @@ function display(coinName, symbol, priceFormat, cryptoImage) {
       
       <div class="card-container-header">
         <p class="card-content-name">${coinName}</p>
-        <p class="card-content-symbol">${symbol}</p>
+        <p class="card-content-symbol">${symbol.toUpperCase()}</p>
       </div>
       
       <div class="card-container-price">
